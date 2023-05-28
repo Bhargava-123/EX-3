@@ -18,8 +18,7 @@ will send NACKsignal to client.
 
 # PROGRAM :
 ## CLIENT
-~~~
-PYTHON 3
+```PYTHON 3
 
 import socket
 s=socket.socket()
@@ -39,16 +38,16 @@ while True:
         if ack:
             print(ack)
             i+=s
-~~~
+```
 ## SERVER
-~~~
+```PYTHON 3
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
     print(s.recv(1024).decode())
     s.send("acknowledgement recived from the server".encode())
-~~~
+```
 
 # OUTPUT :
 ## CLIENT
